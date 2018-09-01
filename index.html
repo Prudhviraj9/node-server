@@ -30,7 +30,7 @@
                                 subject = $("#subject").val();
                                 text = $("#content").val();
                                 $("#message").text("Sending E-mail...Please wait");
-                                $.get("http://localhost:3000/send", {
+                                $.get("https://sleepy-oasis-76333.herokuapp.com/send", {
                                         to: to,
                                         subject: subject,
                                         text: text
