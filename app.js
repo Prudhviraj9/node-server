@@ -76,9 +76,11 @@ app.post('/user', (req, res) => {
     console.log(req.body);
 
     db.collection('user').insertOne(req.body, (err, result) => {
-        if (err) return console.log(err);
-
-        console.log('saved to database');
+        if (err) {
+            res.end("error");
+        } else {
+            res.end("signedUp");
+        };
       })
 })
 
